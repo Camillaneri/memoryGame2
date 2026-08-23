@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
+const cardExplanations = document.querySelector(".card-explanations");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
@@ -76,6 +77,16 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
+
+  const cardexplanation = document.createElement("div");
+    cardexplanation.classList.add("explanation");
+    cardexplanation.setAttribute("data-name", firstCard.dataset.name);
+    cardexplanation.innerHTML = `
+      <div > 
+       <p>${card.text-title}</p>
+      </div>
+    `;
+    cardExplanations.appendChild(cardexplanation);
 
   resetBoard();
 }

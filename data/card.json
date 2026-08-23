@@ -1,18 +1,26 @@
 [
     {
         "image": "../assets/card-g.jpg",
-        "name": "memory2"
+        "name": "memory2",
+        "text-title": "elemento1",
+        "text-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus vulputate ligula non porta. Vivamus iaculis hendrerit posuere. Pellentesque porttitor iaculis dolor in consequat. Morbi quis orci urna. Vivamus lectus ipsum, eleifend a sem et, pellentesque dapibus tortor. Suspendisse potenti. Nulla vitae dui est."
     },
     {
         "image": "../assets/card-j.jpg",
-        "name": "grapes"
+        "name": "grapes",
+        "text-title": "elemento2",
+        "text-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus vulputate ligula non porta. Vivamus iaculis hendrerit posuere. Pellentesque porttitor iaculis dolor in consequat. Morbi quis orci urna. Vivamus lectus ipsum, eleifend a sem et, pellentesque dapibus tortor. Suspendisse potenti. Nulla vitae dui est."
     },
     {
         "image": "../assets/card-r.jpg",
-        "name": "lemon"
+        "name": "lemon",
+        "text-title": "elemento3",
+        "text-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus vulputate ligula non porta. Vivamus iaculis hendrerit posuere. Pellentesque porttitor iaculis dolor in consequat. Morbi quis orci urna. Vivamus lectus ipsum, eleifend a sem et, pellentesque dapibus tortor. Suspendisse potenti. Nulla vitae dui est."
     },
     {
         "image": "../assets/card-w.jpg",
-        "name": "orange"
+        "name": "orange",
+        "text-title": "elemento4",
+        "text-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus vulputate ligula non porta. Vivamus iaculis hendrerit posuere. Pellentesque porttitor iaculis dolor in consequat. Morbi quis orci urna. Vivamus lectus ipsum, eleifend a sem et, pellentesque dapibus tortor. Suspendisse potenti. Nulla vitae dui est."
     }
 ]
