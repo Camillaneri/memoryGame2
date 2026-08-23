@@ -1,0 +1,18 @@
+[
+    {
+        "image": "../assets/card-g.jpg",
+        "name": "chili"
+    },
+    {
+        "image": "../assets/card-j.jpg",
+        "name": "grapes"
+    },
+    {
+        "image": "../assets/card-r.jpg",
+        "name": "lemon"
+    },
+    {
+        "image": "../assets/card-w.jpg",
+        "name": "orange"
+    }
+]
