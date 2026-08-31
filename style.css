@@ -195,7 +195,7 @@ p {
   .back {
   position: absolute;
   background-size: cover;
-  background-image: url("../assets/card-back.jpg")
+  background-image: url("assets/card-back.jpg")
 }
 
   .front-image {
