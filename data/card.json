@@ -6,13 +6,13 @@
         "textcontent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus vulputate ligula non porta. Vivamus iaculis hendrerit posuere. Pellentesque porttitor iaculis dolor in consequat. Morbi quis orci urna. Vivamus lectus ipsum, eleifend a sem et, pellentesque dapibus tortor. Suspendisse potenti. Nulla vitae dui est."
     },
     {
-        "image": "assets/card-j.jpg",
+        "image": "../assets/card-j.jpg",
         "name": "grapes",
         "texttitle": "elemento2",
         "textcontent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus vulputate ligula non porta. Vivamus iaculis hendrerit posuere. Pellentesque porttitor iaculis dolor in consequat. Morbi quis orci urna. Vivamus lectus ipsum, eleifend a sem et, pellentesque dapibus tortor. Suspendisse potenti. Nulla vitae dui est."
     },
     {
-        "image": "assets/card-r.jpg",
+        "image": "./assets/card-r.jpg",
         "name": "lemon",
         "texttitle": "elemento3",
         "textcontent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus vulputate ligula non porta. Vivamus iaculis hendrerit posuere. Pellentesque porttitor iaculis dolor in consequat. Morbi quis orci urna. Vivamus lectus ipsum, eleifend a sem et, pellentesque dapibus tortor. Suspendisse potenti. Nulla vitae dui est."
