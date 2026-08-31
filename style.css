@@ -2,11 +2,27 @@
   box-sizing: border-box;
 }
 
+html{
+   min-height: 100%;
+}
+
 body{
+  margin: 0;
+  min-height: 100dvh;
+  font-size: 16px;
+
   font-family: "Source code pro", sans-serif;
   background-color: #12181f;
   color: white;
+  /*min-height: 100dvh;
+  min-width: 100dvw;*/
 }
+
+p {
+    font-size:1rem;
+    margin: 1rem;
+}
+
 
   h1 {
     text-align: center;
@@ -14,16 +30,66 @@ body{
     margin: 2vh;
 }
 
-p {
-    text-align: center;
-    font-size: 2vh;
-    margin: 5%
+.accordion{
+  font-family: "Source code pro", sans-serif;
+  font-size:medium;
+  font-weight: 600;
 }
 
 .score-text {
-    font-size: 5vh;
-    font-weight: bold;
+
     margin: 2vh;
+}
+
+
+.accordion {
+  background-color: #27ae60;
+  color: #ffffff;
+  cursor: pointer;
+
+  padding: clamp(6px, 1.5vw, 16px);
+  width: 100%;
+
+  border: 2px solid white;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #27ae60;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #27ae60;
+  font-weight: bold;
+  float: right;
+  margin-left: 0.5vh;;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  
+  background-color: #25547f;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  
+}
+
+.panel p {
+    margin-block-start: clamp(0px, 0.5vw, 18px);
+    margin-block-end: clamp(0px, 0.5vw, 18px);
+    text-align: left;
+    font-size: 0.8rem;
+    
+ }
+
+.closedac{
+  height: 0;
 }
 
   .actions {
@@ -38,38 +104,69 @@ p {
     color: white;
 }
 
-
-  .memory-box{
+.memory-game{
     display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
+    gap: clamp(10px, 3vw, 22px);
+    flex-wrap: wrap;
+    min-height: 100dvh;
+}
+
+  .everithing-box{
+    flex: 2 1 0;
+    min-width: 0;
+    
+   
+}
+
+.memory-box{
+  display: flex;
+  justify-content: center;
 }
 
 .card-explanation-box{
-background-color: #ffff;
-flex-grow: 1;
+  background-color: #27ae60;
+  flex: 1 1 300px;
+  min-width: 100px;
+  max-width: 25vw;
 }
 
 .card-explanations{
-  color:#12181f;
+  color:#ffffff;
 }
 
 .card-explanations p{
-  color:#12181f;
+  color:#ffffff;
 }
 
 .grid-container {
 
    --card-ratio: 1.5; /* image width / image height */
-
-   width:
-    calc(30vh * var(--card-ratio) * 2);
+  width: 100%;
+  max-width:
+    calc(40vh * var(--card-ratio) * 2);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(6px, 1.5vw, 16px);
-  padding: clamp(8px, 2vw, 20px);
+  /*padding: clamp(8px, 2vw, 20px);*/
   perspective: 1000px;
+  flex-grow: 2;
+  padding-left: 5vw;
+  padding-right: 5vw;
+
+ /* @media (max-width: 700px) {
+  .memory-game {
+    flex-direction: column;
+  }
+
+  .everithing-box,
+  .card-explanation-box {
+    width: 100%;
+  }
+}*/
 }
+
+
 
 .card {
     position: relative;
@@ -106,3 +203,4 @@ flex-grow: 1;
   width: 100%;
   height: auto;
 }
+

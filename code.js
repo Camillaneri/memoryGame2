@@ -74,23 +74,6 @@ function checkForMatch() {
   isMatch ? disableCards() : unflipCards();
 }
 
-function disableCards() {
-  firstCard.removeEventListener("click", flipCard);
-  secondCard.removeEventListener("click", flipCard);
-
-  const cardexplanation = document.createElement("div");
-    cardexplanation.classList.add("explanation");
-    cardexplanation.setAttribute("data-name", firstCard.dataset.name);
-    cardexplanation.innerHTML = `
-      <div > 
-       <p>${card.text-title}</p>
-      </div>
-    `;
-    cardExplanations.appendChild(cardexplanation);
-
-  resetBoard();
-}
-
 function unflipCards() {
   setTimeout(() => {
     firstCard.classList.remove("flipped");
@@ -104,7 +87,58 @@ function resetBoard() {
   secondCard = null;
   lockBoard = false;
 }
+
+
+var acc = document.getElementsByClassName("accordion");
+var shorten = document.getElementsByClassName("activeaccordion");
+var i;
+
+
+cardExplanations.addEventListener("click", function(event) {
+
+  if (!event.target.classList.contains("accordion")) {
+    return;
+  }
+    const panel = event.target.nextElementSibling;
+
+    document.querySelectorAll(".card-explanations .panel").forEach(function(otherPanel) {
+      if (otherPanel !== panel) {
+      otherPanel.classList.add("closedac");
+      }
+    });
+
+    panel.classList.toggle("closedac");
+  });
+
+
+
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+
+  const cardData = cards.find(card => card.name === firstCard.dataset.name);
+
+  const cardexplanation = document.createElement("div");
+    cardexplanation.classList.add("explanation");
+    cardexplanation.setAttribute("data-name", firstCard.dataset.name);
+    cardexplanation.innerHTML = `
+
+      <button class="accordion">${cardData.texttitle}</button>
+                              <div class="panel closedac"> 
+                              <p>${cardData.textcontent}</p>
+                          </div>
+    `;
+    cardExplanations.appendChild(cardexplanation);
+
+  resetBoard();
+}
+
 /*
+
+panel.classList.toggle("openpanel");
+panel.style.maxHeight = panel.scrollHeight + "px";
+
+
 function restart() {
   resetBoard();
   shuffleCards();
